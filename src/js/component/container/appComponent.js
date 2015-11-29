@@ -34,7 +34,7 @@ class AppComponent extends React.Component {
 /**
  * @param {Object} completeState
  *
- * @returns {{}}
+ * @returns {Object}
  */
 var mapCompleteStateToAppComponentProps = function (completeState) {
     return {
