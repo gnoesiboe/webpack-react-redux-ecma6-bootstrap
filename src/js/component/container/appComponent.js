@@ -37,8 +37,6 @@ class AppComponent extends React.Component {
  * @returns {{}}
  */
 var mapCompleteStateToAppComponentProps = function (completeState) {
-    console.log('incoming complete state:', completeState);
-
     return {
         someKey: completeState.someKey
     }
