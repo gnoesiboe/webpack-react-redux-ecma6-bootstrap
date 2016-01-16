@@ -1,30 +1,30 @@
 import * as actionTypes from './../actions/actionTypes';
-import { List } from 'immutable';
+import Collection from './../collection';
 
 /**
- * @type {List}
+ * @type {Collection}
  */
-var _defaultState = List.of();
+var _defaultState = new Collection();
 
 /**
- * @param {List} currentState
+ * @param {Collection} currentState
  * @param {Object} action
  *
- * @return {List}
+ * @return {Collection}
  *
  * @private
  */
 var _handleSomeAction = function (currentState, action) {
-    //@todo replace with soome useful shit
+    var newState = currentState.clone();
 
-    return currentState.push(Date.now());
+    return newState.add(Date.now());
 };
 
 /**
- * @param {List} currentState
+ * @param {Collection} currentState
  * @param {Object} action
  *
- * @returns {List}
+ * @returns {Collection}
  */
 export default function someActionReducer(currentState = _defaultState, action) {
     switch (action.type) {
