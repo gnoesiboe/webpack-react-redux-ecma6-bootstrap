@@ -1,6 +1,7 @@
 import React from 'react';
 import * as reactRedux from 'react-redux';
 import * as actionFactory from '../../actions/actionFactory';
+import * as stateNamespace from './../../stateNamespace';
 
 /**
  * @author Gijs Nieuwenhuis <gijs.nieuwenhuis@freshheads.com>
@@ -38,7 +39,7 @@ class AppComponent extends React.Component {
  */
 var mapCompleteStateToAppComponentProps = function (completeState) {
     return {
-        someKey: completeState.someKey
+        [stateNamespace.SOME_KEY]: completeState.someKey
     }
 };
 
