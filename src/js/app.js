@@ -4,8 +4,7 @@ import AppComponent from './component/container/appComponent';
 import { Provider } from 'react-redux'
 import * as redux from 'redux';
 import reducers from './reducers';
-
-var store = redux.createStore(reducers);
+import store from './store';
 
 ReactDom.render(
     <Provider store={store}>
