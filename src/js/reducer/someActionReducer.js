@@ -1,5 +1,6 @@
 import * as actionTypes from './../actions/actionTypes';
 import Collection from './../collection';
+import deepFreeze from 'deep-freeze-strict';
 
 /**
  * @type {Collection}
@@ -27,6 +28,11 @@ var _handleSomeAction = function (currentState, action) {
  * @returns {Collection}
  */
 export default function someActionReducer(currentState = _defaultState, action) {
+
+    // ensure that current state and action are not mutated!
+    deepFreeze(currentState);
+    deepFreeze(action);
+
     switch (action.type) {
         case actionTypes.SOME_ACTION:
             return _handleSomeAction(currentState, action);

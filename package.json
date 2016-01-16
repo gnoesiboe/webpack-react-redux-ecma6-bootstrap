@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
+    "deep-freeze-strict": "^1.1.1",
     "jquery": "^2.2.0",
     "lodash": "^4.0.0",
     "react": "^0.14.6",
