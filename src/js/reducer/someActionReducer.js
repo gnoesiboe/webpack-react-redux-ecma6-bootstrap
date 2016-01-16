@@ -1,5 +1,4 @@
 import * as actionTypes from './../actions/actionTypes';
-import { List } from 'immutable';
 
 /**
  * @type {List}
